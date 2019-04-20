@@ -18,7 +18,10 @@ public class CountryControler {
 
     @GetMapping("/")
     public String showPage(Model model, @RequestParam(defaultValue = "0")int page){
-        model.addAttribute("data", countryRepository.findAll(new PageRequest(page, 4)));
+        PageRequest pageRequest = PageRequest.of(page, 4);
+
+        model.addAttribute("data", countryRepository.findAll(pageRequest));
+
         return "index";
     }
 
@@ -37,8 +40,10 @@ public class CountryControler {
 
     @GetMapping("/findOne")
     @ResponseBody
-    public String findOne(Integer id){
-       return countryRepository.findOne(id);
+    public Country findOne(Integer id){
+
+        return countryRepository.getOne(id);
+
 
     }
 }
