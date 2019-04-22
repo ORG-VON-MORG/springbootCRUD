@@ -26,6 +26,12 @@ public class SpringbootCrudApplication implements CommandLineRunner {
 
 		countryRepository.save(new Country("Deutschland", "Berlin"));
 		countryRepository.save(new Country("Frankreich", "Paris"));
+		countryRepository.save(new Country("Frankreich1", "Paris1"));
+		countryRepository.save(new Country("Frankreich2", "Paris2"));
+		countryRepository.save(new Country("Frankreich3", "Paris3"));
+		countryRepository.save(new Country("Frankreich4", "Paris4"));
+		countryRepository.save(new Country("Frankreich5", "Paris5"));
+		countryRepository.save(new Country("England", "Paris"));
 	}
 
 }
