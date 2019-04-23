@@ -21,6 +21,7 @@ public class CountryControler {
         PageRequest pageRequest = PageRequest.of(page, 4);
 
         model.addAttribute("data", countryRepository.findAll(pageRequest));
+        model.addAttribute("currentPage", page);
 
         return "index";
     }
