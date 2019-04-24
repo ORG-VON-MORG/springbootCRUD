@@ -23,6 +23,9 @@
                         <td th:text="${country.name}"></td>
                         <td th:text="${country.capital}"></td>
                         <td><a class="btn btn-primary eBtn">Edit</a> </td>
+                        <td><a data-toggle="modal" href="#exampleModal">Open Modal</a> </td>
+                        <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#exampleModal">Open Modal</button></td>
+                        <td>  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button></td>
                     </tr>
                     </tbody>
                 </table>
@@ -75,10 +78,29 @@
         </div>
         </div>
 
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
         <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="webjars/jquery/3.3.1-1/jquery.min.js"></script>
+        <script type="text/javascript" th:src="@{js/main.js}"></script>
 
     </div>
 

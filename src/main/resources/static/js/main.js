@@ -1,5 +1,6 @@
-$(document).read(function () {
+$(document).ready(function () {
     $('.table .eBtn').on('click', function (event) {
-        $('.myForm #exampleModal').modal();
+        $('.myForm #exampleModal').modal;
     });
-})
+});
+
