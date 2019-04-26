@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th = "http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <title>Text1</title>
+    <meta charset="UTF-8">
+
+    <link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="webjars/jquery/3.3.1-1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
 </head>
 <body>
     <div class="container">
@@ -22,10 +27,7 @@
                         <td th:text="${country.id}"></td>
                         <td th:text="${country.name}"></td>
                         <td th:text="${country.capital}"></td>
-                        <td><a class="btn btn-primary eBtn">Edit</a> </td>
-                        <td><a data-toggle="modal" href="#exampleModal">Open Modal</a> </td>
-                        <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#exampleModal">Open Modal</button></td>
-                        <td>  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button></td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</button></td>
                     </tr>
                     </tbody>
                 </table>
@@ -53,14 +55,14 @@
                             </div>
                             <div class="modal-body">
 
-                                    <div class="form-group">
-                                        <label for="id" class="col-form-label">ID:</label>
-                                        <input type="text" class="form-control" id="id" name="id" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="name" class="col-form-label">Name:</label>
-                                        <input type="text" class="form-control" id="name" name="name" value="" />
-                                    </div>
+                                <div class="form-group">
+                                    <label for="id" class="col-form-label">ID:</label>
+                                    <input type="text" class="form-control" id="id" name="id" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" class="col-form-label">Name:</label>
+                                    <input type="text" class="form-control" id="name" name="name" value="" />
+                                </div>
                                 <div class="form-group">
                                     <label for="capital" class="col-form-label">Capital:</label>
                                     <input type="text" class="form-control" id="capital" name="capital" value="" />
@@ -76,34 +78,9 @@
                 </div>
             </form>
         </div>
-        </div>
 
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Some text in the modal.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-        <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="webjars/jquery/3.3.1-1/jquery.min.js"></script>
-        <script type="text/javascript" th:src="@{js/main.js}"></script>
 
     </div>
-
 
 
 </body>
