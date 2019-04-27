@@ -35,7 +35,10 @@
                                     data-toggle="modal" data-target="#exampleModal"
                                     th:data-id="${country.id}"
                                     th:data-name="${country.name}"
-                                    th:data-capital="${country.capital}">Edit</button></td>
+                                    th:data-capital="${country.capital}">Edit</button>
+                            <a th:href="@{/delete/(id=${country.id})}" class="btn btn-primary">Deleted</a></td>
+
+                        <td><button href="www.google.de" type="button" class="open-dialog btn btn-primary">Google</button></td>
                     </tr>
                     </tbody>
                 </table>
